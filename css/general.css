@@ -107,188 +107,179 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
 /* --------------------------------------
    Offer
    -------------------------------------- */
-.offer    {
-  height: 100vh;
-  text-align: center; 
-}
-
-header {
-  height: 110px;
-  background-color: #FFF;
-}
-header .wrapper {height: 100%;}
-header * {
-  display: inline-block;
-  vertical-align: middle;
-}
-.logo {
-  margin-right: 15px;
-}
+.offer               {
+                         height: 100vh;
+                         text-align: center;
+                     }
+header               {
+                         height: 110px;
+                         background-color: #FFF;
+                     }
+header .wrapper      {    height: 100% }
+header *             {
+                         display: inline-block;
+                         vertical-align: middle;
+                     }
+.logo                {    margin-right: 15px }
 .clubCard,
-.record {
-  background-color: #FFF;
-  border: 1px solid #66A717;
-  height: 48px;
-  padding: 0 15px;
-  margin: 0 15px;
-  -webkit-transition: all .2s;
-     -moz-transition: all .2s;
-      -ms-transition: all .2s;
-       -o-transition: all .2s;
-          transition: all .2s;
-}
+.record              {
+                         background-color: #FFF;
+                         border: 1px solid #66A717;
+                         height: 48px;
+                         padding: 0 15px;
+                         margin: 0 15px;
+                         -webkit-transition: all .2s;
+                         -moz-transition: all .2s;
+                         -ms-transition: all .2s;
+                         -o-transition: all .2s;
+                         transition: all .2s;
+                     }
 .clubCard span,
-.record span {
-  font-size: 20px;
-  color: #000;
-  margin-left: 15px;
-  -webkit-transition: all .2s;
-     -moz-transition: all .2s;
-      -ms-transition: all .2s;
-       -o-transition: all .2s;
-          transition: all .2s;
-}
+.record span         {
+                         font-size: 20px;
+                         color: #000;
+                         margin-left: 15px;
+                         -webkit-transition: all .2s;
+                         -moz-transition: all .2s;
+                         -ms-transition: all .2s;
+                         -o-transition: all .2s;
+                         transition: all .2s;
+                     }
 .clubCard:hover,
-.record:hover {
-  background-color: #66A717;
-}
+.record:hover        {    background-color: #66A717 }
 .clubCard:hover span,
-.record:hover span{
-  color: #FFF;
+.record:hover span   {    color: #FFF }
+.phone               {
+                         font: 26px 'pt_sansbold';
+                         color: #66A717;
+                         margin-left: 20px;
+                         -webkit-transition: all .2s;
+                         -moz-transition: all .2s;
+                         -ms-transition: all .2s;
+                         -o-transition: all .2s;
+                         transition: all .2s;
+                     }
+.phone:hover         {    color: #A6DF3A }
+@media (max-width: 1260px)          { 
+    header         {    height: 80px }
+    .logo img      {    width: 250px }
+    .phone         {    margin-left: 10px;}
+    .clubCard,
+    .record        {    margin: 0 5px;}
 }
-.phone {
-  font: 26px 'pt_sansbold';
-  color: #66A717;
-  margin-left: 20px;
-  -webkit-transition: all .2s;
-     -moz-transition: all .2s;
-      -ms-transition: all .2s;
-       -o-transition: all .2s;
-          transition: all .2s;
+@media (max-width: 1120px)          { 
+    .clubCard      {    display: none;}
+    .record        {    margin: 0 10%;}
+    .phone,
+    .logo          {    margin: 0 }
 }
-.phone:hover {
-  color: #A6DF3A;
+@media (max-width: 1000px)          { 
+    .logo img      {    width: 200px;}
+    .record        {    margin: 0 7%;}
 }
-
-@media (max-width: 1260px) {
-  header   {height: 80px;}
-  .logo img {width: 250px;}
-  .phone    {margin-left: 10px;}
-  .clubCard,
-  .record    {margin: 0 5px;}
+@media (max-width: 860px)          { 
+    .phone         {    font-size: 20px;}
+    .record        {    margin: 0 5%;}
 }
-@media (max-width: 1120px) {
-  .clubCard  {  display: none;}
-  .record    {  margin: 0 10%;}
-  .phone, .logo     {  margin: 0;}
+@media (max-width: 750px)          { 
+    .record        {    display: none;}
+    .phone         {   float: right; margin-top: 28px;}
+    .logo          {   float: left; margin-top: 15px;}
 }
-@media (max-width: 1000px) {
-  .logo img  {width: 200px;}
-  .record    {  margin: 0 7%;}
+@media (max-width: 420px)          { 
+    .phone         {    font-size: 18px;}
+    .logo          {    margin-top: 20px;}
+    .logo img      {    width: 170px;}
 }
-@media (max-width: 860px) {
-  .phone     {font-size: 20px;}
-  .record    {  margin: 0 5%;}
-}
-@media (max-width: 750px) {
-  .record    {  display: none;}
-  .phone     {  float: right; margin-top: 28px;}
-  .logo      {  float: left; margin-top: 15px;}
-}
-@media (max-width: 420px) {
-  .phone     {  font-size: 18px;}
-  .logo      {  margin-top: 20px;}
-  .logo img  {  width: 170px;}
-}
-@media (max-width: 360px) {
-  .phone     {  font-size: 14px; margin-top: 34px;}
+@media (max-width: 360px)          { 
+    .phone         {    font-size: 14px; margin-top: 34px; }
 }
 
 
 
-.offer__info {
-  height: calc(100vh - 110px);
-  position: relative; z-index: 0;
-  background-image: url(../images/offerBg.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  -webkit-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-}
-.offer__info:after {
-  content: "";
-  display: block;
-  position: absolute; z-index: -1;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0, .5);
-}
-.offer__info .wrapper {
-   display: inline-block;
-   vertical-align: middle;
-}
-h1 {
-  font: 64px 'pt_sansbold';
-  text-transform: uppercase;
-  color: #FFF;
-  margin-bottom: 5vh;
-}
-form p {
-  display: inline-block;
-  font: 32px 'pt_sansbold';
-  color: #FFF;
-  border-bottom: 3px dotted #fff;
-  margin-bottom: 20px;
-}
-form label {
-  font: 26px 'pt_sansregular';
-  color: #FFF;
-  display: block;
-  margin-bottom: 10px;
-  padding-left: 20px;
-}
-form> .left,
-form> .right  {
-  display: inline-block;
-  width: 320px;
-  text-align: left;
-}
-form> .left {
-  margin-right: 20px;
-}
-form input {
-  width: 100%;
-  height: 60px;
-  padding-left: 20px;
-  font: 24px 'pt_sansregular';
-  color: #999999;
-  background-color: #F7F7F7;
-  border: 1px solid #CCCCCC;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-}
-form button {
-  width: 350px;
-  height: 60px;
-  font: 32px 'pt_sansbold';
-  color: #FFF;
-  background-color: #A6DF3A;
-  border: 1px solid #F7F7F7;
-  display: block;
-  margin: 35px auto 0;
-  -webkit-transition: all .2s;
-     -moz-transition: all .2s;
-      -ms-transition: all .2s;
-       -o-transition: all .2s;
-          transition: all .2s;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-}
-form button:hover {
-  background-color: #ED6D00;
-}
+.offer__info            {
+                          height: calc(100vh - 110px);
+                          position: relative; z-index: 0;
+                          background-image: url(../images/offerBg.jpg);
+                          background-repeat: no-repeat;
+                          background-position: 50% 50%;
+                          -webkit-background-size: cover;
+                               -o-background-size: cover;
+                                  background-size: cover;
+                        }
+.offer__info:after      {
+                          content: "";
+                          display: block;
+                          position: absolute; z-index: -1;
+                          top: 0; left: 0;
+                          width: 100%;
+                          height: 100%;
+                          background-color: rgba(0,0,0, .5);
+                        }
+.offer__info .wrapper   {
+                           display: inline-block;
+                           vertical-align: middle;
+                        }
+h1                      {
+                          font: 64px 'pt_sansbold';
+                          text-transform: uppercase;
+                          color: #FFF;
+                          margin-bottom: 5vh;
+                        }
+.offerForm p                  {
+                          display: inline-block;
+                          font: 32px 'pt_sansbold';
+                          color: #FFF;
+                          border-bottom: 3px dotted #fff;
+                          margin-bottom: 20px;
+                        }
+.offerForm label        {
+                          font: 26px 'pt_sansregular';
+                          color: #FFF;
+                          display: block;
+                          margin-bottom: 10px;
+                          padding-left: 20px;
+                        }
+.offerForm> .left,
+.offerForm> .right      {
+                          display: inline-block;
+                          width: 320px;
+                          text-align: left;
+                        }
+.offerForm> .left       {
+                          margin-right: 20px;
+                        }
+.offerForm input        {
+                          width: 100%;
+                          height: 60px;
+                          padding-left: 20px;
+                          font: 24px 'pt_sansregular';
+                          color: #999999;
+                          background-color: #F7F7F7;
+                          border: 1px solid #CCCCCC;
+                          -webkit-border-radius: 3px;
+                                  border-radius: 3px;
+                        }
+.offerForm button             {
+                          width: 350px;
+                          height: 60px;
+                          font: 32px 'pt_sansbold';
+                          color: #FFF;
+                          background-color: #A6DF3A;
+                          border: 1px solid #F7F7F7;
+                          display: block;
+                          margin: 35px auto 0;
+                          -webkit-transition: all .2s;
+                             -moz-transition: all .2s;
+                              -ms-transition: all .2s;
+                               -o-transition: all .2s;
+                                  transition: all .2s;
+                          -webkit-border-radius: 3px;
+                                  border-radius: 3px;
+                        }
+.offerForm button:hover       {
+                          background-color: #ED6D00;
+                        }
 
 ::-moz-placeholder { 
    opacity:  1;
@@ -297,36 +288,36 @@ form button:hover {
 
 
 @media (max-width: 1400px) {
-  h1 {  font-size: 52px;}
+  h1                 {  font-size: 52px;}
 }
 @media (max-width: 1000px) {
-  h1      {  font-size: 42px;}
-  form p  {  font-size: 24px;}
+  h1                 {  font-size: 42px;}
+  .offerForm p       {  font-size: 24px;}
 }
 @media (max-width: 800px) {
-  h1      {  font-size: 36px;}
-  form p  {  font-size: 20px;}
-  form label,
-  form input {  font-size: 20px;}
-  form input {  height: 50px;}
-  form> .left,
-  form> .right {  width: 300px;}
-  form button  {  height: 50px; width: 300px; font-size: 24px;}
+  h1                 {  font-size: 36px;}
+  .offerForm p       {  font-size: 20px;}
+  .offerForm label,
+  .offerForm input   {  font-size: 20px;}
+  .offerForm input   {  height: 50px;}
+  .offerForm> .left,
+  .offerForm> .right {  width: 300px;}
+  .offerForm button  {  height: 50px; width: 300px; font-size: 24px;}
 }
 @media (max-width: 700px) {
   h1           {   font-size: 34px; margin-bottom: 3vh;}
-  form p       {  font-size: 18px;} 
-  form> .left  {  margin: 0;}
-  form label   {  margin-top: 5px;}
-  form p       {  border-bottom: none;}
+  .offerForm p       {  font-size: 18px;} 
+  .offerForm> .left  {  margin: 0;}
+  .offerForm label   {  margin-top: 5px;}
+  .offerForm p       {  border-bottom: none;}
 }
 @media (max-width: 500px) {
-  h1           {   font-size: 28px; margin-bottom: 3vh;}
-  form p       {  font-size: 16px;} 
+  h1                 {  font-size: 28px; margin-bottom: 3vh;}
+  .offerForm p       {  font-size: 16px;} 
 }
 @media (max-height: 700px) {
-  .offer       { min-height: 700px;}
-  .offer__info { height: calc(700px - 110px);}
+  .offer             {  min-height: 700px;}
+  .offer__info       {  height: calc(700px - 110px);}
 }
 
 /*---------------------------------------------------------------*/
