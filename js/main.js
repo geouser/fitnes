@@ -1,59 +1,3 @@
-// Global parameters
-window.params = {
-  widthFull: 750,
-  maxRowHeight: 0,
-  isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
-  isIOS: /iPhone|iPad|iPod/i.test(navigator.userAgent)
-};
-
-function Main() {
-
-  // Modules initialization
-  var maxRowHeight = new MaxHeight($('.cross-row'));
-
-
-  // polyfills
-  window.viewportUnitsBuggyfill.init();
-
-  // add conditional classes
-  if (params.isIOS) $('html').addClass('-ios');
-  if (params.isMobile) $('html').addClass('-mobile');
-
-}
-
-$(function(){
-  Main();
-});
-
-$(window).on('load', function(){
-  setTimeout(function(){
-    $(window).trigger('resize');
-  }, 500);
-});
-
-// Браузер Internet Explorer?
-$(function(){
-  if (navigator.appName == 'Microsoft Internet Explorer') {
-    var ua = navigator.userAgent;
-    var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
-    if (re.exec(ua) != null) {
-      var v = parseFloat( RegExp.$1 );
-      $('html').addClass("ie");
-      $('html').addClass("ie"+v);
-    }
-  } else if (navigator.appName == 'Netscape') {
-    var ua = navigator.userAgent;
-    var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
-    if (re.exec(ua) != null) {
-      var v = parseFloat( RegExp.$1 );
-      $('html').addClass("ie");
-      $('html').addClass("ie"+v);
-    }
-  }
-});
-
-
-
 /*
 #############################
 #   Main JS for ____________   #
@@ -85,6 +29,116 @@ jQuery(document).ready(function($) {
     e.preventDefault();
     $.magnificPopup.close();
   });
+
+
+  function buildGallerySlider(){
+
+    var windowWidth = $(window).width();
+    var itemCount = Math.ceil(windowWidth/320);
+
+    var requiredWidth = itemCount*320;
+    //var galleryMargin = (requiredWidth - windowWidth)/2;
+    var galleryMargin = requiredWidth - windowWidth;
+
+    var galleryBlock = $('#photogallery .images');
+
+    if (requiredWidth > windowWidth) {
+      galleryBlock.css({'margin': '0 -'+galleryMargin+'px 0 0'});
+
+      //var itemCountScroll = itemCount-1;
+    var itemCountScroll = 1;
+    
+    } else {
+      galleryBlock.css({'margin': '0'});
+
+      var itemCountScroll = itemCount;
+    }
+
+    galleryConfig = {
+      adaptiveHeight: true,
+      autoplay: false,
+      autoplaySpeed: 12000,
+      arrows: false,
+      dots: false,
+      fade: false,
+      infinite: true,
+      initialSlide: 1,
+      pauseOnHover: true,
+      slide: '.col',
+      slidesToShow: itemCount,
+      slidesToScroll: itemCountScroll,
+      speed: 1000,
+      touchMove: true,
+      useCSS: true
+    };
+
+    gallerySlider = $('#photogallery .images').slick(galleryConfig);
+  
+
+  var rNext = true;
+  var rPrev = true; 
+
+  $('.rNext').on({
+    mouseenter: function(){
+    rNext = true;
+    fRepNext();
+    },
+    mouseleave: function(){
+    rNext = false;
+    }
+  });
+
+  $('.rPrev').on({
+    mouseenter: function(){
+    rPrev = true;
+    fRepPrev();
+    },
+    mouseleave: function(){
+    rPrev = false;
+    }
+  });
+
+  function fRepNext(){
+    $('#photogallery .images').slick("slickSetOption", "speed", "3000").slick("slickSetOption", "cssEase", "linear").slick("slickNext").slick("slickSetOption", "speed", "1000");
+    if (rNext){
+    setTimeout(fRepNext, 0);
+    }
+  }
+
+  function fRepPrev(){
+    $('#photogallery .images').slick("slickSetOption", "speed", "3000").slick("slickSetOption", "cssEase", "linear").slick("slickPrev").slick("slickSetOption", "speed", "1000");
+    if (rPrev){
+    setTimeout(fRepPrev, 0);
+    }
+  };
+
+
+  $('#photogallery .images .col').magnificPopup({
+       delegate: '.item',
+       type: 'image',
+       fixedContentPos: false,
+       removalDelay: 300,
+       mainClass: 'mfp-fade',
+      gallery:{
+        enabled:true
+      }
+    });
+  
+  };
+
+  buildGallerySlider();
+
+  $(window).resize(function(){
+    gallerySlider.slick('unslick');
+    buildGallerySlider();
+  });
+
+
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+
+  $('.slider').slick();
 
 });
 
