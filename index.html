@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>ULTRA Fitness</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><!--[if IE]>
         <meta http-equiv="ImageResize" content="no">
         <meta http-equiv="ImageToolbar" content="no">
@@ -10,17 +10,14 @@
         <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><![endif]-->
         <meta property="og:url" content="">
-        <meta property="og:title" content="">
-        <meta property="og:description" content="">
-        <meta property="og:image" content="">
+        <meta property="og:title" content="ULTRA Fitness">
+        <meta property="og:description" content="2 тренировки в зале ULTRA Fitness, подкачают твоя силу воли на +59%">
+        <meta property="og:image" content="images/logo.png">
         <meta name="google-site-verification" content="">
         <!--<link rel="shortcut icon" href="images/favicon.ico">-->
-        
         <link rel="stylesheet" href="js/slick/slick.css">
         <link rel="stylesheet" href="js/slick/slick-theme.css">
-
         <link rel="stylesheet" href="css/magnific-popup.css">
-
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/general.css">
@@ -41,11 +38,11 @@
                     <div class="logo">
                         <img src="images/logo.png" alt="">
                     </div>
-                    <button class="record">
+                    <button class="record magnific" href="#modal-popup">
                         <img src="images/pencil.png" alt="">
                         <span>Записаться онлайн</span>
                     </button>
-                    <button class="clubCard">
+                    <button class="clubCard magnific" href="#modal-popup">
                         <img src="images/card.png" alt=""> 
                         <span>Хочу клубную карту</span>
                     </button>
@@ -55,21 +52,22 @@
             <div class="offer__info vertical">
                 <div class="wrapper">
                         <h1>2 тренировки в зале ULTRA FitneSs, подкачают твоя силу воли на +59%</h1>
-                        <form action="#" class="offerForm">
+                        <form action="forms.php" class="offerForm">
                             <p>Запишись на тест-драйв прямо сейчас!<br> 
                             И получи бесплатно гостевой визит в наш фитнес на 2 персоны</p><br>
                             <div class="left">
                                 <label for="name">
                                     Ваше имя
                                 </label>
-                                <input type="text" name="name" class="name" placeholder="Иван Иванович Иванов">
+                                <input type="text" name="name" class="name" placeholder="Иван Иванович Иванов" required>
                             </div>
                             <div class="right">
                                 <label for="tel">
                                     Ваше имя
                                 </label>
-                                <input type="tel" name="tel" class="tel" placeholder="+7 (495) 500-44-44">
+                                <input type="tel" name="tel" class="tel" placeholder="+7 (495) 500-44-44" required>
                             </div>
+                            <input type="hidden" name="form_id" value="1">
                             <button type="submit">
                                 Отправить
                             </button>
@@ -380,7 +378,42 @@
 
 
         <!-- magnific popups -->
-        <div id="modal-popup" class="mfp-hide zoom-anim-dialog"></div>
+        <div id="modal-popup" class="mfp-hide zoom-anim-dialog mf-modal">
+            <form action="forms.php" class="offerForm">
+                <p>Запишись на тест-драйв прямо сейчас!<br> 
+                И получи бесплатно гостевой визит в наш фитнес на 2 персоны</p><br>
+                <div class="left">
+                    <label for="name">
+                        Ваше имя
+                    </label>
+                    <input type="text" name="name" class="name" placeholder="Иван Иванович Иванов" required>
+                </div>
+                <div class="right">
+                    <label for="tel">
+                        Ваше имя
+                    </label>
+                    <input type="tel" name="tel" class="tel" placeholder="+7 (495) 500-44-44" required>
+                </div>
+                <input type="hidden" name="form_id" value="1">
+                <button type="submit">
+                    Отправить
+                </button>
+            </form>
+        </div>
+        <a href="#modal-popup" id="open-popup" class="magnific mfp-hide"></a>
+
+        <div id="modal-thanks" class="mfp-hide zoom-anim-dialog mf-modal">
+            <h2>Спасибо, что обратились к нам!<br>Скоро мы свяжемся с Вами =)</h2>
+        </div>
+        <a href="#modal-thanks" id="open-thanks" class="magnific mfp-hide"></a>
+
+        <div id="modal-error" class="mfp-hide zoom-anim-dialog mf-modal">
+            <h2>Упс! Что-то пошло не так!</h2>
+            <p>Но вы всегда можете связаться с нами:</p>
+            <a class="tel" href="tel:74955004444">+7 (495) 500-44-44</a>
+            <a class="mail" href="mailto:hello@ultra-fitness.ru">hello@ultra-fitness.ru</a>
+        </div>
+        <a href="#modal-error" id="open-error" class="magnific mfp-hide"></a>
         <!-- END magnific popups -->
 
 

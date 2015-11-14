@@ -437,8 +437,9 @@ h1                      {
 .team .about button:hover       { background-color: #ED6D00;}
 
 @media (max-width: 1300px) {
-  .tabs_menu     {width: 300px;}
-  .tabs_menu li a {font-size: 18px; padding: 15px 0 15px 70px;}
+  .team:after                     { display: none;}
+  .tabs_menu                      {width: 300px;}
+  .tabs_menu li a                 {font-size: 18px; padding: 15px 0 15px 70px;}
   .tabs_menu li:nth-child(1)      {background-size: 37px;}
   .tabs_menu li:nth-child(2)      { background-size: 27px;}
   .tabs_menu li:nth-child(3)      { background-size: 27px;}
@@ -522,7 +523,9 @@ h1                      {
                                   width: 1200px;
                                   margin: 0 auto;
                                   background-color: #ccc;}
-
+@media (max-width: 1300px) {
+  .tour                         { display: none;}
+}
 
 
 
@@ -628,10 +631,10 @@ h1                      {
 .cards                      { background-color: rgb( 247, 247, 247 );
                               padding: 105px 0 0;}
 .cards h2                   { font: 40px 'pt_sansbold'; margin-bottom: 50px; text-transform: uppercase; text-align: center;}
-.cards .box                 { padding: 35px 0 65px; height: 560px; position: relative; overflow: hidden;}
+.cards .box                 { padding: 35px 0 65px; height: 560px; position: relative; overflow: hidden; z-index: 1}
 .cards .box:nth-child(even) { text-align: right;}
 .cards .box:nth-child(odd)  { text-align: left;}
-.front_block                { width: 630px; height: 100%; display: inline-block; text-align: center;}
+.front_block                { width: 630px; height: 100%; display: inline-block; text-align: center; position: relative; z-index: 2;}
 .front_block img            { width: 65.4%; display: inline-block; margin-bottom: 35px;}
 .front_block h3             { text-align: center; font: 30px 'pt_sansbold'; text-transform: uppercase;}
 
@@ -645,6 +648,7 @@ h1                      {
                               font-size: 26px;
                               text-align: center;
                               opacity: 0;
+                              z-index: -1;
                               -webkit-transition: all 0.6s ease;
                               -o-transition: all 0.6s ease;
                               transition: all 0.6s ease;
@@ -664,7 +668,7 @@ h1                      {
                               -o-transition: all 0.3s ease;
                               transition: all 0.3s ease;}
 .info_block button:hover    { background-color: #dfdede;}
-.cards .box:hover .info_block { opacity: 1;}
+.cards .box:hover .info_block { opacity: 1; z-index: 5}
 
 
 
@@ -792,3 +796,17 @@ h1                      {
    -------------------------------------- */
 footer                      { background-color: #333333; padding: 35px 0;}
 footer p.wrapper            { font: 20px 'pt_sansbold'; color: #fff; text-align: left;}
+
+
+
+/* --------------------------------------
+   popups
+   -------------------------------------- */
+.mf-modal                   { text-align: center; background-color: #99CC33; padding: 30px 0;}
+.mf-modal h2                { font-weight: 400; color: #fff;}
+.mf-modal p                 { color: #fff;}
+.mf-modal a                 { display: block; color: #fff!important;}
+
+@media (max-width: 500px) {
+  .mf-modal h2              { font-size: 20px;}
+}
