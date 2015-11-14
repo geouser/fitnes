@@ -432,7 +432,7 @@ h1                      {
 .team .about button:hover       { background-color: #ED6D00;}
 
 @media (max-width: 1300px) {
-  .tabs_menu    {width: 300px;}
+  .tabs_menu     {width: 300px;}
   .tabs_menu li a {font-size: 18px; padding: 15px 0 15px 70px;}
   .tabs_menu li:nth-child(1)      {background-size: 37px;}
   .tabs_menu li:nth-child(2)      { background-size: 27px;}
@@ -452,12 +452,14 @@ h1                      {
 .slick-arrow.slick-next         { right: 5%;}
 .personal .content              { width: 468px;}
 .team h2                        { font-size: 38px;}
+.team .about p                  {   font-size: 22px;}
 }
 @media (max-width: 800px) {
   .team                         { padding: 40px 0 60px;}
   .personal .slide .image         { width: 270px; height: 270px;}
   .personal .content              { width: 400px;}
   .team h2                        { font-size: 34px; margin-bottom: 30px;}
+  .team .about p                  {   font-size: 18px;}
 }
 @media (max-width: 730px) {
   .team h2                        { font-size: 30px;}
@@ -483,6 +485,10 @@ h1                      {
   .tabs_menu li:nth-child(5)      { background-size: 25px;}
   .tabs_menu li:nth-child(6)      { background-size: 15px;}
   .tabs_menu li:nth-child(7)      { background-size: 25px;}
+  .team .about p                  {   font-size: 16px;}
+  .team .about button             { padding: 14px 65px;
+                                  font: 26px 'pt_sansbold';
+                                  margin-top: 45px;}
 }
 @media (max-width: 520px) {
   .tabs_menu li         {   width: 95%; }
