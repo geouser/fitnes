@@ -679,14 +679,33 @@ h1                      {
 .contacts .inf a            { font-family: 'pt_sansbold'; color: #99cc33!important; display: block;}
 .contacts .inf a:hover      { text-decoration: underline;}
 
+@media (max-width: 1100px) {
+  .contacts .metro          { padding-left: 0;}
+  .contacts .metro img      { width: 10%;}
+  .contacts .metro .metros  { width: 83%; font-size: 20px;}
+  .contacts .inf            { font-size: 25px; padding-left: 5%;}
+}
 
+@media (max-width: 900px) {
+  .contacts .inf            { font-size: 20px;}
+}
 
+@media (max-width: 700px) {
+  .contacts .metro img      { display: block; margin: 0 auto 15px; width: 50px;}
+  .contacts .col-2          { width: 100%; float: none; display: inline-block; text-align: center;}
+  .contacts                 { padding: 30px 0;}
+  .contacts .inf            { padding-left: 0; margin-top: 15px;}
+  .contacts .inf address br { display: none;}
+}
 
 /* --------------------------------------
    Map
    -------------------------------------- */
 .map                        { height: 430px; background-color: #ccc;}
 
+@media (max-width: 900px) {
+  .map                      { height: 300px;}
+}
 
 
 /* --------------------------------------
@@ -710,6 +729,21 @@ h1                      {
                               border-radius: 5px;}
 .head p                     { display: inline-block; vertical-align: middle; color: #fff;}
 .head img                   { height: 80%; display: inline-block; vertical-align: middle; margin-left: 5px; margin-right: 5px;}
+
+@media (max-width: 950px) {
+  .social_plugins .col-3    { width: 50%; float: none; margin: 15px -2px; display: inline-block; vertical-align: top;}
+  .social_plugins           { padding: 30px 0;}
+}
+
+@media (max-width: 650px) {
+  .social_plugins .col-3    { width: 100%;}
+  .head                     { margin: 0 20px;}
+}
+@media (max-width: 400px) {
+  .head                     { margin: 0;}
+}
+
+
 
 /* --------------------------------------
    Footer
