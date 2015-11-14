@@ -631,8 +631,21 @@ h1                      {
 .social_plugins             { padding: 90px 0 60px;}
 .social_plugins h2          { font: 30px 'pt_sansbold'; text-transform: uppercase; margin-bottom: 20px;}
 
+.social_plugins .box        { height: 330px; text-align: center;}
 
+#vk_groups                  { display: inline-block;}
+.fb-page                    { width: 290px!important; height: 330px!important;}
+.fb_iframe_widget span      { height: 100%!important; width: 100%!important;}
+.fb_iframe_widget iframe    { width: 100%!important; height: 100%!important;}
 
+.head                       { height: 34px; 
+                              width: 290px;
+                              display: inline-block;
+                              background-color: #004879;
+                              text-align: left;
+                              border-radius: 5px;}
+.head p                     { display: inline-block; vertical-align: middle; color: #fff;}
+.head img                   { height: 80%; display: inline-block; vertical-align: middle; margin-left: 5px; margin-right: 5px;}
 
 /* --------------------------------------
    Footer
