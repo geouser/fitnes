@@ -135,7 +135,12 @@ jQuery(document).ready(function($) {
 
 
   $(function() {
-    $( "#tabs" ).tabs();
+    $( "#tabs" ).tabs({
+      activate: function( event, ui ) {
+        console.log(event);
+        ui.newPanel.find('.slider').get(0).slick.setPosition();
+      }
+    });
   });
 
   $('.slider').slick();

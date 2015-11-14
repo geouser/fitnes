@@ -324,12 +324,23 @@ h1                      {
 /* --------------------------------------
    Team
    -------------------------------------- */
-.team                           { padding: 90px 0 0;}
+.team                           { padding: 90px 0 140px; position: relative;}
+.team:after                     { content: ' ';
+                                  width: 1200px;
+                                  height: 1px;
+                                  background-color: #A6DF3A;
+                                  position: absolute;
+                                  left: 50%;
+                                  margin-left: -600px;
+                                  bottom: 0;}
+
 .team h2                        { font: 40px 'pt_sansbold';
                                   text-align: center;
                                   text-transform: uppercase;
                                   margin-bottom: 60px;}
 .team h2 span                   { color: #99cc33;}
+.personal                       { margin-bottom: 80px;}
+
 
 .tabs_menu                      { display: inline-block;
                                   width: 430px;
@@ -390,6 +401,35 @@ h1                      {
                                   margin-bottom: 30px;}
 .personal .slide .name          { font: 30px 'pt_sansbold'; margin-bottom: 15px;}
 .personal .slide .citate        { font: 30px 'pt_sansitalic'}
+.slick-arrow                    { width: 20px;
+                                  height: 32px;
+                                  top: 37.5%;
+                                  z-index: 10;}
+.slick-arrow:before             { display: none;}
+.slick-arrow.slick-prev         { background-image: url(../images/svg/left.svg);
+                                  background-size: 100% 100%;
+                                  left: 18%;}
+.slick-arrow.slick-next         { background-image: url(../images/svg/right.svg);
+                                  background-size: 100% 100%;
+                                  right: 18%;}
+
+.team .about p                  { width: 90%; font-size: 26px; display: inline-block;}
+.team .about button             { padding: 16px 85px;
+                                  font: 30px 'pt_sansbold';
+                                  color: #fff;
+                                  margin-top: 65px;
+                                  background-color: #A6DF3A;
+                                  border: 1px solid #F7F7F7;
+                                  display: block;
+                                  margin: 35px auto 0;
+                                  -webkit-transition: all .2s;
+                                     -moz-transition: all .2s;
+                                      -ms-transition: all .2s;
+                                       -o-transition: all .2s;
+                                          transition: all .2s;
+                                  -webkit-border-radius: 5px;
+                                          border-radius: 5px;}
+.team .about button:hover       { background-color: #ED6D00;}
 
 /* --------------------------------------
    Tour
@@ -407,6 +447,9 @@ h1                      {
                                   width: 1200px;
                                   margin: 0 auto;
                                   background-color: #ccc;}
+
+
+
 
 
 /* --------------------------------------
