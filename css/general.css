@@ -431,6 +431,70 @@ h1                      {
                                           border-radius: 5px;}
 .team .about button:hover       { background-color: #ED6D00;}
 
+@media (max-width: 1300px) {
+  .tabs_menu    {width: 300px;}
+  .tabs_menu li a {font-size: 18px; padding: 15px 0 15px 70px;}
+  .tabs_menu li:nth-child(1)      {background-size: 37px;}
+  .tabs_menu li:nth-child(2)      { background-size: 27px;}
+  .tabs_menu li:nth-child(3)      { background-size: 27px;}
+  .tabs_menu li:nth-child(4)      { background-size: 27px;}
+  .tabs_menu li:nth-child(5)      { background-size: 35px;}
+  .tabs_menu li:nth-child(6)      { background-size: 20px;}
+  .tabs_menu li:nth-child(7)      { background-size: 35px;}
+
+  .personal .slide .image         { width: 300px; height: 300px; margin-bottom: 10px;}
+  .personal .slide .name          { font-size: 26px; margin-bottom: 5px;}
+  .personal .slide .citate        { font-size: 22px;}
+  .personal .content              { width: 668px;}
+}
+@media (max-width: 1100px) {
+.slick-arrow.slick-prev         { left: 5%;}
+.slick-arrow.slick-next         { right: 5%;}
+.personal .content              { width: 468px;}
+.team h2                        { font-size: 38px;}
+}
+@media (max-width: 800px) {
+  .team                         { padding: 40px 0 60px;}
+  .personal .slide .image         { width: 270px; height: 270px;}
+  .personal .content              { width: 400px;}
+  .team h2                        { font-size: 34px; margin-bottom: 30px;}
+}
+@media (max-width: 730px) {
+  .team h2                        { font-size: 30px;}
+  .tabs_menu                      { width: 100%; text-align: center; margin-bottom: 10px;}
+  .personal .content              { width: 100%;}
+  .tabs_menu li                   {  width: 48%; display: inline-block; margin: 0.5vw auto; border-radius: 10px; 
+                                     -webkit-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                                       -moz-box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                                            box-shadow: 0 1px 1px rgba(255,255,255,0.4) inset, 0 -1px 1px rgba(0,0,0,0.5) inset;
+                                  }
+  .tabs_menu li:not(:last-child)  {  border: 1px solid #A6DF3A;}
+  .tabs_menu li:last-child        {  border: 1px solid #A6DF3A; }
+  .tabs_menu li a                 {   font-size: 15px;}
+}
+@media (max-width: 600px) {
+  .team h2                        { font-size: 26px;}
+  .tabs_menu li a                 { font-size: 14px; padding: 10px 0 10px 45px;}
+  .tabs_menu li                   { background-position: 10px 50% !important;}
+  .tabs_menu li:nth-child(1)      {background-size: 27px;}
+  .tabs_menu li:nth-child(2)      { background-size: 17px;}
+  .tabs_menu li:nth-child(3)      { background-size: 17px;}
+  .tabs_menu li:nth-child(4)      { background-size: 17px;}
+  .tabs_menu li:nth-child(5)      { background-size: 25px;}
+  .tabs_menu li:nth-child(6)      { background-size: 15px;}
+  .tabs_menu li:nth-child(7)      { background-size: 25px;}
+}
+@media (max-width: 520px) {
+  .tabs_menu li         {   width: 95%; }
+  .tabs_menu li a       {   font-size: 16px;}
+}
+@media (max-width: 400px) {
+  .personal .slide .image         { width: 230px; height: 230px;}
+  .slick-arrow.slick-prev         { left: 1%;}
+  .slick-arrow.slick-next         { right: 1%;}
+  .personal .slide .name          { font-size: 24px; margin-bottom: 5px;}
+  .personal .slide .citate        { font-size: 20px;}
+}
 /* --------------------------------------
    Tour
    -------------------------------------- */
