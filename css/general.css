@@ -91,10 +91,15 @@ a[href^=tel]                  {     color:inherit !important; text-decoration:no
   .wrapper  {width: 95%;}
 }
 @media (max-width: 800px) {
+    h2      {font-size: 36px;}
+    p       {font-size: 16px;}
 }
 @media (max-width: 660px) {
+    h2      {font-size: 32px; }
+    p       {font-size: 14px;}
 }
 @media (max-width: 570px) {
+    h2      {font-size: 28px;}
 }
 @media (max-width: 360px) {
 }
@@ -623,10 +628,10 @@ h1                      {
 .cards                      { background-color: rgb( 247, 247, 247 );
                               padding: 105px 0 0;}
 .cards h2                   { font: 40px 'pt_sansbold'; margin-bottom: 50px; text-transform: uppercase; text-align: center;}
-.cards .box                 { padding: 35px 0 65px; height: 540px; position: relative; overflow: hidden;}
+.cards .box                 { padding: 35px 0 65px; height: 50vw; position: relative; overflow: hidden;}
 .cards .box:nth-child(even) { text-align: right;}
 .cards .box:nth-child(odd)  { text-align: left;}
-.front_block                { width: 650px; height: 100%; display: inline-block; text-align: center;}
+.front_block                { width: 100%; height: 100%; display: inline-block; text-align: center;}
 .front_block img            { width: 65.4%; display: inline-block; margin-bottom: 35px;}
 .front_block h3             { text-align: center; font: 30px 'pt_sansbold'; text-transform: uppercase;}
 
@@ -638,14 +643,13 @@ h1                      {
                               left: 0;
                               right: 0;
                               font-size: 26px;
-                              padding-left: 13.8%;
-                              text-align: left;
+                              text-align: center;
                               opacity: 0;
                               -webkit-transition: all 0.6s ease;
                               -o-transition: all 0.6s ease;
                               transition: all 0.6s ease;
                               background-color: rgba(153, 204, 51, 0.9);}
-.info_block .wrap           { display: inline-block; vertical-align: middle;}
+.info_block .wrap           { display: inline-block; vertical-align: middle; text-align: left;}
 .info_block h3              { font-family: 'pt_sansbold'; margin-bottom: 30px; text-transform: uppercase;}
 .info_block .views          { margin-bottom: 30px;}
 
@@ -664,7 +668,39 @@ h1                      {
 
 
 
-
+@media (max-width: 1300px) {
+  .front_block                { width: 100%;}
+  .cards .box                 { height: 50vw;}
+  .info_block .wrap p         {font-size: 18px;}
+}
+@media (max-width: 800px) {
+  .front_block h3              { font-size: 26px;}
+  .info_block .wrap p          { font-size: 16px;}
+  .cards h2                    { font-size: 32px;}
+  .info_block button           { width: 80%;
+                                 height: 60px;
+                                 margin-top: 25px;
+                                 }
+}
+@media (max-width: 700px) {
+    .cards .box                {   width: 100%; height: 100vw;}
+    .front_block h3              { font-size: 26px;}
+    .info_block .wrap p          { font-size: 20px;}
+    .info_block button           { width: 80%;
+                                 height: 80px;
+                                 margin-top: 25px;
+                                 }          
+}
+@media (max-width: 420px) {
+    .front_block h3              { margin-bottom: 5px;}
+    .info_block .wrap p          { font-size: 16px;}
+    .info_block .views           {  margin-bottom: 10px;}
+    .cards h2                    { font-size: 28px;}
+    .info_block button           { width: 80%;
+                                 height: 60px;
+                                 margin-top: 15px;
+                                 }          
+}  
 /* --------------------------------------
    Contacts
    -------------------------------------- */
