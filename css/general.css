@@ -623,14 +623,36 @@ h1                      {
 
 
 
+/* --------------------------------------
+   Collection
+   -------------------------------------- */
+.collection                   { background-color: rgb( 247, 247, 247 );
+                              padding: 130px 0 0;}
+.collection h2                { font: 40px 'pt_sansbold'; color: #000; text-transform: uppercase; margin-bottom: 20px;}
+.collection p                 { font: 32px 'pt_sansbold';}
+.collection p span            { font-family: 'pt_sansregular';}
+
+.collection .wrap             { margin-top: 90px;}
+.collection .item             { width: 33.33%; display: inline-block; vertical-align: top; margin: 0 -2px 40px;}
+.collection .item figure      { height: 80px; width: 100%; text-align: center; margin-bottom: 10px;}
+.collection .item figure img  { height: 100%; max-width: 100%; display: inline-block;}
+.collection .item p           { font: 32px 'pt_sansregular'; padding: 0 25px;}
+.collection .item-2x          { float: left;}
+
+
+
 
 
 /* --------------------------------------
    Cards
    -------------------------------------- */
 .cards                      { background-color: rgb( 247, 247, 247 );
-                              padding: 105px 0 0;}
-.cards h2                   { font: 40px 'pt_sansbold'; margin-bottom: 50px; text-transform: uppercase; text-align: center;}
+                              padding: 105px 0 120px;}
+.cards .box                 { text-align: center;}
+.cards .box img             { width: 73%; display: inline-block;}
+
+
+/*.cards h2                   { font: 40px 'pt_sansbold'; margin-bottom: 50px; text-transform: uppercase; text-align: center;}
 .cards .box                 { padding: 35px 0 65px; height: 560px; position: relative; overflow: hidden; z-index: 1}
 .cards .box:nth-child(even) { text-align: right;}
 .cards .box:nth-child(odd)  { text-align: left;}
@@ -705,6 +727,98 @@ h1                      {
                                  margin-top: 15px;
                                  }          
 }  
+*/
+
+
+
+/* --------------------------------------
+   Our-cards
+   -------------------------------------- */
+.our-cards                       { padding: 170px 0;
+                                    background-image: url(../images/ourcards-bg.jpg);
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: 50% 50%;
+                                    text-align: center;}
+
+.our-cards .left,
+.our-cards .right                 { display: inline-block;
+                                    width: 50%;
+                                    margin: 0 -2px;
+                                    vertical-align: middle;
+                                    text-align: center;}
+
+
+.our-cards h3                     { color: #000; 
+                                    text-transform: uppercase;
+                                    font: 40px 'pt_sansbold';}
+.our-cards h3 span                { color: #a6df3a;}
+
+
+.our-cards a                      { color: #000;
+                                    height: 70px;
+                                    width: 350px;
+                                    background-color: #a6df3a;
+                                    border: 2px solid #fff;
+                                    border-radius: 5px;
+                                    display: inline-block;
+                                    -webkit-transition: all 0.3s ease;
+                                    -o-transition: all 0.3s ease;
+                                    transition: all 0.3s ease;
+                                    font: 32px 'pt_sansbold';}
+.our-cards a:hover                { background-color: #ED6D00;}
+
+
+
+
+/* --------------------------------------
+   Scheme
+   -------------------------------------- */
+.scheme                          {padding: 160px 0 190px;
+                                  background-image: url(../images/scheme-bg.jpg);
+                                  background-repeat: no-repeat;
+                                  background-size: cover;
+                                  background-position: 50% 50%;
+                                  position: relative;
+                                  text-align: center;
+                                  z-index: 1;}
+.scheme:before                  { content: " ";
+                                    width: 100%;
+                                    height: 100%;
+                                    display: block;
+                                    position: absolute;
+                                    left: 0;
+                                    bottom: 0;
+                                    top: 0;
+                                    right: 0;
+                                    background-color: rgba(0,0,0,0.4);
+                                    z-index: -1;}
+.scheme h3                        { color: #fff; 
+                                    text-transform: uppercase;
+                                    font: 43px 'pt_sansbold';}
+.scheme p                         { color: #fff;
+                                    font: 40px 'pt_sansbold';
+                                    margin-bottom: 50px;}
+ 
+.scheme a                         { color: #000;
+                                    height: 70px;
+                                    width: 350px;
+                                    background-color: #a6df3a;
+                                    border: 2px solid #fff;
+                                    border-radius: 5px;
+                                    display: inline-block;
+                                    -webkit-transition: all 0.3s ease;
+                                    -o-transition: all 0.3s ease;
+                                    transition: all 0.3s ease;
+                                    font: 32px 'pt_sansbold';}
+.scheme a:hover                   { background-color: #ED6D00;}
+
+
+
+
+
+
+
 /* --------------------------------------
    Contacts
    -------------------------------------- */
@@ -722,7 +836,9 @@ h1                      {
 .contacts .inf              { text-align: left; font-size: 30px;}
 .contacts .inf address      { font-family: 'pt_sansregular'; font-style: normal;}
 
-.contacts .inf a            { font-family: 'pt_sansbold'; color: #99cc33!important; display: block;}
+.contacts .inf a            { font-family: 'pt_sansbold'; color: #99cc33!important; display: inline-block; vertical-align: middle;}
+.contacts .inf a.icon       { width: 44px; height: 44px;}
+.contacts .inf a.icon img   { width: 100%;}
 .contacts .inf a:hover      { text-decoration: underline;}
 
 @media (max-width: 1100px) {
@@ -734,6 +850,7 @@ h1                      {
 
 @media (max-width: 900px) {
   .contacts .inf            { font-size: 20px;}
+  .contacts .inf a.icon       { width: 30px; height: 30px;}
 }
 
 @media (max-width: 700px) {
@@ -795,9 +912,15 @@ h1                      {
    Footer
    -------------------------------------- */
 footer                      { background-color: #333333; padding: 35px 0;}
-footer p.wrapper            { font: 20px 'pt_sansbold'; color: #fff; text-align: left;}
+footer .left                { width: 50%; float: left;}
+footer .right               { width: 50%; float: right;}
+footer p                    { font: 20px 'pt_sansregular'; color: #fff; text-align: left;}
 
-
+@media (max-width: 800px) {
+  footer p                    { text-align: center;}
+  footer .left                { width: 100%; float: none; margin-bottom: 25px; text-align: center;}
+  footer .right               { width: 100%; float: none; text-align: center;}
+}
 
 /* --------------------------------------
    popups
