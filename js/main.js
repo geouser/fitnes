@@ -91,6 +91,18 @@ jQuery(document).ready(function($) {
     mainClass: 'my-mfp-slide-bottom'
   });
 
+  
+  $('.popup-youtube').magnificPopup({
+    type: 'iframe',
+    mainClass: 'my-mfp-slide-bottom',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
+
+
+
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
     $.magnificPopup.close();

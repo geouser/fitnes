@@ -507,6 +507,43 @@ h1                      {
   .personal .slide .name          { font-size: 24px; margin-bottom: 5px;}
   .personal .slide .citate        { font-size: 20px;}
 }
+
+
+/* --------------------------------------
+   Video
+   -------------------------------------- */
+.video-yt                          { padding: 110px 0 250px;
+                                  background-image: url(../images/video-bg.jpg);
+                                  background-repeat: no-repeat;
+                                  background-size: cover;
+                                  background-position: 50% 50%;
+                                  text-align: center;}
+.video-yt h2                       { font: 40px 'pt_sansbold'; color: #000; text-transform: uppercase; margin-bottom: 90px}
+.video-yt > button                 { background-color: transparent;
+                                  border: none;
+                                  -webkit-transition: all 0.3s ease;
+                                  -o-transition: all 0.3s ease;
+                                  transition: all 0.3s ease;
+                                  width: 100px;
+                                  height: 100px;}
+.video-yt > button img             { width: 100%; height: 100%;}
+.video-yt > button:hover           { -webkit-transform: scale(1.1);
+                                      -ms-transform: scale(1.1);
+                                       -o-transform: scale(1.1);
+                                          transform: scale(1.1);}
+
+@media (max-width: 1100px) {
+  .video-yt                        { padding: 99px 0 225px;}
+  .video-yt h2                     { font-size: 30px; margin-bottom: 40px;}
+  .video-yt > button               { width: 90px; height: 90px;}
+}
+
+@media (max-width: 900px) {
+  .video-yt                        { padding: 50px 0 112px;}
+}
+
+
+
 /* --------------------------------------
    Tour
    -------------------------------------- */
@@ -639,7 +676,19 @@ h1                      {
 .collection .item p           { font: 32px 'pt_sansregular'; padding: 0 25px;}
 .collection .item-2x          { float: left;}
 
+@media (max-width: 1100px) {
+  .collection h2              { font-size: 30px;}
+  .collection p               { font-size: 24px;}
+  .collection .item           { width: 50%;}
+  .collection .item-2x        { width: 100%; float: none;}
+  .collection .item figure    { height: 60px;}
+  .collection .item p         { font-size: 22px;}
+}
 
+@media (max-width: 500px) {
+  .collection                 { padding: 50px 0 0;}
+  .collection .item p         { font-size: 18px; padding: 0 5px;}
+}
 
 
 
@@ -650,7 +699,10 @@ h1                      {
                               padding: 105px 0 120px;}
 .cards .box                 { text-align: center;}
 .cards .box img             { width: 73%; display: inline-block;}
-
+@media (max-width: 700px) {
+  .cards                    { padding: 50px 0;}
+  .cards .col-4             { width: 50%;}
+}
 
 /*.cards h2                   { font: 40px 'pt_sansbold'; margin-bottom: 50px; text-transform: uppercase; text-align: center;}
 .cards .box                 { padding: 35px 0 65px; height: 560px; position: relative; overflow: hidden; z-index: 1}
@@ -768,7 +820,15 @@ h1                      {
                                     font: 32px 'pt_sansbold';}
 .our-cards a:hover                { background-color: #ED6D00;}
 
+@media (max-width: 1100px) {
+  .our-cards                      { padding: 50px 0}
+  .our-cards h3                   { font-size: 30px; margin-bottom: 25px;}
 
+  .our-cards .left,
+  .our-cards .right               { width: 100%;}
+
+  .our-cards a                    { font-size: 25px; width: 300px; height: 55px;}
+}
 
 
 /* --------------------------------------
@@ -813,7 +873,12 @@ h1                      {
                                     font: 32px 'pt_sansbold';}
 .scheme a:hover                   { background-color: #ED6D00;}
 
-
+@media (max-width: 1100px) {
+  .scheme                         { padding: 50px 0;}
+  .scheme h3                      { font-size: 30px;}
+  .scheme p                       { font-size: 25px;}
+  .scheme a                       { font-size: 25px; height: 55px; width: 300px;}
+}
 
 
 
