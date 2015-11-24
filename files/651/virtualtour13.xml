@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- for xml compliance -->
+<krpano version="1.0.8.14">
+    <!-- actions to perform while loading -->
+    <events onxmlcomplete="onxmlcompleteaction();"/>
+    <action name="onxmlcompleteaction">
+		unselectmapspotsbutpassed();
+		selectmapspot(mapspot0,270);
+		firstloadcompleteaction();
+	</action>
+    <action name="playpanosounds">
+		playbackgroundsound(none);
+	</action>
+    <action name="stoppanosounds">
+		stopbackgroundsound();
+	</action>
+    <action name="closepanoobjects">
+	</action>
+    <!--************** Панорама *******************************************************************-->
+    <!-- @File="virtualtour13.xml" @PanoName="receptionist" @FilePath="D:/panoramza/ultra fitness/исходники/receptionist.tif" -->
+    <panoview h="-85.86" v="0.78" fov="90"/>
+    <!-- view parameters -->
+    <view fisheye="0" limitview="range" hlookatmin="-180" hlookatmax="180" vlookatmin="-90" vlookatmax="67.4763" maxpixelzoom="1.0" fovmax="90" fov="90" hlookat="-85.86" vlookat="0.78"/>
+    <autorotate horizon="0.78" tofov="90" waittime="1" speed="5"/>
+    <!-- preview image -->
+    <preview url="virtualtourdata/virtualtour13/preview.jpg" type="CUBESTRIP" striporder="FRBLUD" details="16"/>
+    <!-- the pano itself -->
+    <image type="CUBE" multires="true" tilesize="955" baseindex="0">
+        <level tiledimagewidth="1910" tiledimageheight="1910">
+            <left url="virtualtourdata/virtualtour13/3/1/%v_%u.jpg"/>
+            <front url="virtualtourdata/virtualtour13/0/1/%v_%u.jpg"/>
+            <right url="virtualtourdata/virtualtour13/1/1/%v_%u.jpg"/>
+            <back url="virtualtourdata/virtualtour13/2/1/%v_%u.jpg"/>
+            <up url="virtualtourdata/virtualtour13/4/1/%v_%u.jpg"/>
+            <down url="virtualtourdata/virtualtour13/5/1/%v_%u.jpg"/>
+        </level>
+        <level tiledimagewidth="955" tiledimageheight="955">
+            <left url="virtualtourdata/virtualtour13/3/0/%v_%u.jpg"/>
+            <front url="virtualtourdata/virtualtour13/0/0/%v_%u.jpg"/>
+            <right url="virtualtourdata/virtualtour13/1/0/%v_%u.jpg"/>
+            <back url="virtualtourdata/virtualtour13/2/0/%v_%u.jpg"/>
+            <up url="virtualtourdata/virtualtour13/4/0/%v_%u.jpg"/>
+            <down url="virtualtourdata/virtualtour13/5/0/%v_%u.jpg"/>
+        </level>
+        <!-- mobile phone / iphone images -->
+        <mobile>
+            <left url="virtualtourdata/virtualtour13/3/mobile_face.jpg"/>
+            <front url="virtualtourdata/virtualtour13/0/mobile_face.jpg"/>
+            <right url="virtualtourdata/virtualtour13/1/mobile_face.jpg"/>
+            <back url="virtualtourdata/virtualtour13/2/mobile_face.jpg"/>
+            <up url="virtualtourdata/virtualtour13/4/mobile_face.jpg"/>
+            <down url="virtualtourdata/virtualtour13/5/mobile_face.jpg"/>
+        </mobile>
+        <!-- tablet pc / ipad images -->
+        <tablet>
+            <left url="virtualtourdata/virtualtour13/3/tablet_face.jpg"/>
+            <front url="virtualtourdata/virtualtour13/0/tablet_face.jpg"/>
+            <right url="virtualtourdata/virtualtour13/1/tablet_face.jpg"/>
+            <back url="virtualtourdata/virtualtour13/2/tablet_face.jpg"/>
+            <up url="virtualtourdata/virtualtour13/4/tablet_face.jpg"/>
+            <down url="virtualtourdata/virtualtour13/5/tablet_face.jpg"/>
+        </tablet>
+    </image>
+    <!--************** Hotspots and lensflares ****************************************************-->
+    <action name="hidepanospotsaction">
+	</action>
+    <action name="showpanospotsaction">
+	</action>
+    <!-- close all hotspots -->
+</krpano>
