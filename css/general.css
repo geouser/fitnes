@@ -930,7 +930,12 @@ h1                      {
    Map
    -------------------------------------- */
 .map                        { height: 430px; background-color: #ccc;}
-
+a[href^="http://maps.google.com/maps"] {display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc                           {display:none;}
+.gmnoprint div                         {background:none !important;}
 @media (max-width: 900px) {
   .map                      { height: 300px;}
 }
