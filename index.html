@@ -46,15 +46,112 @@
                         <img src="images/card.png" alt=""> 
                         <span>Хочу клубную карту</span>
                     </button>
-                    <a href="" class="phone">+7 (495) 500-44-44</a>
+                    <a href="" class="phone">+7 (495) 500-44-44 <img src="images/tel.png" alt=""> <img src="images/skype.png" alt=""></a>
                 </div>
             </header>
-            <div class="offer__info vertical">
-                <div class="wrapper">
-                        <h1>2 тренировки в зале ULTRA FitneSs, подкачают твоя силу воли на +59%</h1>
+            <nav class="nav vertical">
+                <li><a href="">Новости</a></li>
+                <li><a href="#collection">Акции</a></li>
+                <li><a href="">Расписание</a></li>
+            </nav>
+            <div class="offer__info vertical offerSlider">
+                <div class="wrapper slide-1">
+                        <img src="images/offerImg.svg" alt="">
+                        <h1> Теперь за фитнес <span class="green">плати раз в месяц</span></h1>
                         <form action="forms.php" class="offerForm">
-                            <p>Запишись на тест-драйв прямо сейчас!<br> 
-                            И получи бесплатно гостевой визит в наш фитнес на 2 персоны</p><br>
+                            <p>Да, это реально! Узнай как прямо сейчас</p><br>
+                            <div class="left">
+                                <label for="name">
+                                    Ваше имя
+                                </label>
+                                <input type="text" name="name" class="name" placeholder="Иван Иванович Иванов" required>
+                            </div>
+                            <div class="right">
+                                <label for="tel">
+                                    Ваше имя
+                                </label>
+                                <input type="tel" name="tel" class="tel" placeholder="+7 (495) 500-44-44" required>
+                            </div>
+                            <input type="hidden" name="form_id" value="1">
+                            <button type="submit">
+                                Отправить
+                            </button>
+                        </form>
+                </div>
+                <div class="wrapper slide-2">
+                        <img src="images/offer2img.png" alt="">
+                        <h1>2 тренировки в зале ULTRA FitneSs, <span class="green">подкачают твоя силу воли на +59%</span></h1>
+                        <form action="forms.php" class="offerForm">
+                            <p>Узнай как прямо сейчас</p><br>
+                            <div class="left">
+                                <label for="name">
+                                    Ваше имя
+                                </label>
+                                <input type="text" name="name" class="name" placeholder="Иван Иванович Иванов" required>
+                            </div>
+                            <div class="right">
+                                <label for="tel">
+                                    Ваше имя
+                                </label>
+                                <input type="tel" name="tel" class="tel" placeholder="+7 (495) 500-44-44" required>
+                            </div>
+                            <input type="hidden" name="form_id" value="1">
+                            <button type="submit">
+                                Отправить
+                            </button>
+                        </form>
+                </div>
+                <div class="wrapper slide-3">
+                        <img src="images/offer3img.png" alt="">
+                        <h1>Время до нового года <span class="green">в подарок</span></h1>
+                        <form action="forms.php" class="offerForm">
+                            <p>Успей воспользоваться предложением прямо сейчас</p><br>
+                            <div class="left">
+                                <label for="name">
+                                    Ваше имя
+                                </label>
+                                <input type="text" name="name" class="name" placeholder="Иван Иванович Иванов" required>
+                            </div>
+                            <div class="right">
+                                <label for="tel">
+                                    Ваше имя
+                                </label>
+                                <input type="tel" name="tel" class="tel" placeholder="+7 (495) 500-44-44" required>
+                            </div>
+                            <input type="hidden" name="form_id" value="1">
+                            <button type="submit">
+                                Отправить
+                            </button>
+                        </form>
+                </div>
+                <div class="wrapper slide-4">
+                        <img src="images/offer4img.png" alt="">
+                        <h1>Занимайся с тренером и получи<span class="green">фитнес-карту в подарок</span></h1>
+                        <form action="forms.php" class="offerForm">
+                            <p>Узнай как прямо сейчас</p><br>
+                            <div class="left">
+                                <label for="name">
+                                    Ваше имя
+                                </label>
+                                <input type="text" name="name" class="name" placeholder="Иван Иванович Иванов" required>
+                            </div>
+                            <div class="right">
+                                <label for="tel">
+                                    Ваше имя
+                                </label>
+                                <input type="tel" name="tel" class="tel" placeholder="+7 (495) 500-44-44" required>
+                            </div>
+                            <input type="hidden" name="form_id" value="1">
+                            <button type="submit">
+                                Отправить
+                            </button>
+                        </form>
+                </div>
+                <div class="wrapper slide-5">
+                        <img src="images/offer5img.png" alt="">
+                        <h1>Акция<span class="green">"Новогодняя fortuna"</span></h1>
+                        <form action="forms.php" class="offerForm">
+                            <p>Узнай прямо сейчас, чем будешь заниматься в 2016 году</p><br>
                             <div class="left">
                                 <label for="name">
                                     Ваше имя
@@ -248,7 +345,7 @@
         </div> <!-- end gallery --> 
 
 
-        <div class="collection">
+        <div class="collection" id="collection">
             <div class="wrapper">
                 <h2>Легендарная лимитированная карта позволит</h2>
                 <p>Вам получать особую скидку при оплате дополнительных услуг клуба,<br><span>а также:</span></p>
