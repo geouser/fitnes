@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+<page id="main">
+		 <page>  	
+             		   	<cont><![CDATA[ГРУППОВЫЕ ПРОГРАММЫ]]></cont>
+             		   	<cont><![CDATA[/about/team.php?SECTION_ID=2]]></cont>
+      		</page>
+
+
+		 <page>  	
+             		   	<cont><![CDATA[ТРЕНАЖЕРНЫЙ ЗАЛ]]></cont>
+             		   	<cont><![CDATA[/about/team.php?SECTION_ID=1]]></cont>
+      		</page>
+
+
+		 <page>  	
+             		   	<cont><![CDATA[ВОСТОЧНЫЕ ЕДИНОБОРСТВА, ЙОГА]]></cont>	
+             		   	<cont><![CDATA[/about/team.php?SECTION_ID=5]]></cont>	            
+      		</page>
+
+
+		 <page>  	
+             		   	<cont><![CDATA[ДЕТСКИЙ КЛУБ]]></cont>		
+             		   	<cont><![CDATA[/about/team.php?SECTION_ID=4]]></cont>            
+      		</page>
+
+
+				
+	</page>
+
+
+</root>

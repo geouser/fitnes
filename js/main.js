@@ -108,6 +108,18 @@ $(function() { // scroll to anchor
     mainClass: 'my-mfp-slide-bottom'
   });
 
+  
+  $('.popup-youtube').magnificPopup({
+    type: 'iframe',
+    mainClass: 'my-mfp-slide-bottom',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
+
+
+
   $(document).on('click', '.popup-modal-dismiss', function (e) {
     e.preventDefault();
     $.magnificPopup.close();
@@ -243,6 +255,35 @@ $(function() { // scroll to anchor
     gallerySlider.slick('unslick');
     buildGallerySlider();
   });
+
+
+  function googleMap_initialize() {
+
+      var mapCenterCoord = new google.maps.LatLng(55.692014, 37.896432);
+      var mapMarkerCoord = new google.maps.LatLng(55.692014, 37.896432);
+
+      var mapOptions = {
+        center: mapCenterCoord,
+        zoom: 16,
+        //draggable: false,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+
+      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      var markerImage = new google.maps.MarkerImage('images/green-marker.svg');
+      var marker = new google.maps.Marker({
+        icon: markerImage,
+        position: mapMarkerCoord, 
+        map: map,
+        title:"Siberian Wild Apps"
+      });
+      $(window).resize(function (){
+        map.setCenter(mapCenterCoord);
+      });
+  };
+  googleMap_initialize();
 
 });
 
