@@ -872,7 +872,8 @@ h1 span.green           { color: #A6DF3A; display: block;}
 
 .our-cards h3                     { color: #000; 
                                     text-transform: uppercase;
-                                    font: 40px 'pt_sansbold';}
+                                    font: 40px 'pt_sansbold';
+                                    margin-left: 50px;}
 .our-cards h3 span                { color: #a6df3a;}
 
 
@@ -891,7 +892,7 @@ h1 span.green           { color: #A6DF3A; display: block;}
 
 @media (max-width: 1100px) {
   .our-cards                      { padding: 50px 0}
-  .our-cards h3                   { font-size: 30px; margin-bottom: 25px;}
+  .our-cards h3                   { font-size: 30px; margin-bottom: 25px; margin-left: 0;}
 
   .our-cards .left,
   .our-cards .right               { width: 100%;}
