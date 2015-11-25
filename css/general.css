@@ -183,7 +183,6 @@ header *             {
 .phone img           {    vertical-align: middle;}
 .phone:hover         {    color: #A6DF3A }
 
-
 @media (max-width: 1400px)          { 
     .phone         {    margin-left: 5px;}
     .clubCard,
@@ -256,10 +255,17 @@ header *             {
 .offerSlider .slick-list  {display: inline-block;
                           vertical-align: middle;
                           width: 99%;
+                          height: 100%;
                         }
 
 .offerSlider .slick-arrow.slick-prev {background-image: url("../images/offerPrev.png"); left: 5%; height: 80px; width: 45px;}
 .offerSlider .slick-arrow.slick-next {background-image: url("../images/offerNext.png"); right: 5%; height: 80px; width: 45px;}
+
+.banner                 {text-align: center !important;} 
+.banner>img               {max-height: calc(100vh - 155px) !important; max-width: 86% !important; vertical-align: middle;}
+
+.offerSlider .wrapper   {height: calc(100vh - 155px);}
+.slideWrap              {display: inline-block; vertical-align: middle; max-width: 98%;}
 
 .offer__info .wrapper   {
                            display: inline-block;
@@ -267,7 +273,7 @@ header *             {
                            text-align: center;
                         }
 .offer__info .slick-slide img {display: inline-block;}
-.slide-1>img            {  max-width: 90px;}
+.slide-1 .slideWrap>img {  max-width: 90px;}
 .offer__info h1         {  margin-top: 20px;}
 h1                      {
                           font: 64px 'pt_sansbold';
@@ -385,9 +391,10 @@ h1 span.green           { color: #A6DF3A; display: block;}
   .offerSlider .slick-arrow.slick-next {top: 24%; height: 40px; width: 20px;} 
 }
 @media (max-height: 700px) {
-  .offer             {  min-height: 700px;}
-  .offer__info       {  height: calc(700px - 110px);}
-}
+  .offer                 {  min-height: 700px;}
+  .offer__info           {  height: calc(700px - 120px);}
+  .offerSlider .wrapper  {  height: calc(700px - 120px) !important;}
+}  
 
 /*---------------------------------------------------------------*/
 /* --------------------------------------
