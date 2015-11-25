@@ -169,9 +169,10 @@ header *             {
 .record:hover        {    background-color: #66A717 }
 .clubCard:hover span,
 .record:hover span   {    color: #FFF }
-.phone               {
+.phone a             { margin: 0 1px;}
+.phone a:first-child {
                          font: 26px 'pt_sansbold';
-                         color: #66A717;
+                         color: #66A717!important;
                          margin-left: 20px;
                          vertical-align: middle;
                          -webkit-transition: all .2s;
@@ -180,8 +181,8 @@ header *             {
                          -o-transition: all .2s;
                          transition: all .2s;
                      }
-.phone img           {    vertical-align: middle;}
-.phone:hover         {    color: #A6DF3A }
+.phone a             {    vertical-align: middle;}
+.phone a:hover         {    color: #A6DF3A }
 
 @media (max-width: 1400px)          { 
     .phone         {    margin-left: 5px;}
@@ -204,9 +205,9 @@ header *             {
     .record        {    margin: 0 2% 0 6%;}
 }
 @media (max-width: 860px)          { 
-    .phone         {    font-size: 20px;}
+    .phone a:first-child        {    font-size: 18px;}
     .record        {    margin: 0 1% 0 3%;}
-    .nav  li       {   margin: 0 20px;}
+    .nav  li       {    margin: 0 20px;}
 }
 @media (max-width: 750px)          { 
     .record        {    display: none;}
@@ -216,19 +217,20 @@ header *             {
     .nav  li a     {   font-size: 18px;}
 }
 @media (max-width: 500px)          { 
-    .phone img     {   display: none;}
+    .phone a      {   display: none;}
+    .phone a:first-child      {display: inline-block;}
     .nav           {   height: 40px;}
 }
 @media (max-width: 420px)          { 
-    .phone         {    font-size: 18px;}
+    .phone a:first-child       {    font-size: 18px;}
     .logo          {    margin-top: 20px;}
-    .logo img      {    width: 170px;}
+    .logo img      {    width: 150px;}
     .nav           {   height: 30px;}
     .nav  li       {   margin: 0 5px;}
     .nav  li a     {   font-size: 16px;}
 }
 @media (max-width: 360px)          { 
-    .phone         {    font-size: 14px; margin-top: 34px; }
+    .phone a:first-child         {    font-size: 14px;}
 }
 
 
@@ -441,13 +443,13 @@ h1 span.green           { color: #A6DF3A; display: block;}
 .tabs_menu li:nth-child(4)      { background-image: url(../images/svg/icon-04.svg);
                                   background-size: 37px;
                                   background-position: 22px 50%;}
-.tabs_menu li:nth-child(5)      { background-image: url(../images/svg/icon-05.svg);
+.tabs_menu li:nth-child(5)      { background-image: url(../images/svg/icon-05.png);
                                   background-size: 45px;
                                   background-position: 18px 50%;}
 .tabs_menu li:nth-child(6)      { background-image: url(../images/svg/icon-06.svg);
                                   background-size: 30px;
                                   background-position: 25px 50%;}
-.tabs_menu li:nth-child(7)      { background-image: url(../images/svg/icon-07.svg);
+.tabs_menu li:nth-child(7)      { background-image: url(../images/svg/icon-07.png);
                                   background-size: 45px;
                                   background-position: 18px 50%;}
 
@@ -489,14 +491,15 @@ h1 span.green           { color: #A6DF3A; display: block;}
                                   background-size: 100% 100%;
                                   right: 18%;}
 
-.team .about p                  { width: 90%; font-size: 26px; display: inline-block;}
-.team .about button             { padding: 16px 85px;
+.team .about p                  { width: 90%; font-size: 26px; display: inline-block; display: none; margin: 0 auto;}
+.team .about p.tabs-1           { display: block;}
+.team .about a                  { padding: 16px 85px;
                                   font: 30px 'pt_sansbold';
                                   color: #fff;
                                   margin-top: 65px;
+                                  display: inline-block;
                                   background-color: #A6DF3A;
                                   border: 1px solid #F7F7F7;
-                                  display: block;
                                   margin: 35px auto 0;
                                   -webkit-transition: all .2s;
                                      -moz-transition: all .2s;
@@ -505,7 +508,7 @@ h1 span.green           { color: #A6DF3A; display: block;}
                                           transition: all .2s;
                                   -webkit-border-radius: 5px;
                                           border-radius: 5px;}
-.team .about button:hover       { background-color: #ED6D00;}
+.team .about a:hover            { background-color: #ED6D00;}
 
 @media (max-width: 1300px) {
   .team:after                     { display: none;}
@@ -563,7 +566,7 @@ h1 span.green           { color: #A6DF3A; display: block;}
   .tabs_menu li:nth-child(6)      { background-size: 15px;}
   .tabs_menu li:nth-child(7)      { background-size: 25px;}
   .team .about p                  {   font-size: 16px;}
-  .team .about button             { padding: 14px 65px;
+  .team .about a             { padding: 14px 65px;
                                   font: 26px 'pt_sansbold';
                                   margin-top: 45px;}
 }
@@ -735,16 +738,17 @@ h1 span.green           { color: #A6DF3A; display: block;}
    Collection
    -------------------------------------- */
 .collection                   { background-color: rgb( 247, 247, 247 );
-                              padding: 130px 0 0;}
+                              padding: 70px 0;
+                              text-align: center;}
+.collection > img             { display: inline-block; width: 420px; margin-bottom: 40px;}
 .collection h2                { font: 40px 'pt_sansbold'; color: #000; text-transform: uppercase; margin-bottom: 20px;}
-.collection p                 { font: 32px 'pt_sansbold';}
-.collection p span            { font-family: 'pt_sansregular';}
+.collection p                 { font: 30px 'pt_sansbold'; color: #e88b13;}
 
 .collection .wrap             { margin-top: 90px;}
 .collection .item             { width: 33.33%; display: inline-block; vertical-align: top; margin: 0 -2px 40px;}
 .collection .item figure      { height: 80px; width: 100%; text-align: center; margin-bottom: 10px;}
 .collection .item figure img  { height: 100%; max-width: 100%; display: inline-block;}
-.collection .item p           { font: 32px 'pt_sansregular'; padding: 0 25px;}
+.collection .item p           { font: 26px 'pt_sansregular'; padding: 0 25px; color: #000;}
 .collection .item-2x          { float: left;}
 
 @media (max-width: 1100px) {
@@ -753,10 +757,11 @@ h1 span.green           { color: #A6DF3A; display: block;}
   .collection .item           { width: 50%;}
   .collection .item-2x        { width: 100%; float: none;}
   .collection .item figure    { height: 60px;}
-  .collection .item p         { font-size: 22px;}
+  .collection .item p         { font-size: 20px;}
 }
 
 @media (max-width: 500px) {
+  .collection > img           { width: 270px;}
   .collection                 { padding: 50px 0 0;}
   .collection .item p         { font-size: 18px; padding: 0 5px;}
 }
@@ -766,7 +771,7 @@ h1 span.green           { color: #A6DF3A; display: block;}
 /* --------------------------------------
    Cards
    -------------------------------------- */
-.cards                      { background-color: rgb( 247, 247, 247 );
+/*.cards                      { background-color: rgb( 247, 247, 247 );
                               padding: 105px 0 120px;}
 .cards .box                 { text-align: center;}
 .cards .box img             { width: 73%; display: inline-block;}
@@ -775,7 +780,7 @@ h1 span.green           { color: #A6DF3A; display: block;}
   .cards .col-4             { width: 50%;}
 }
 
-/*.cards h2                   { font: 40px 'pt_sansbold'; margin-bottom: 50px; text-transform: uppercase; text-align: center;}
+.cards h2                   { font: 40px 'pt_sansbold'; margin-bottom: 50px; text-transform: uppercase; text-align: center;}
 .cards .box                 { padding: 35px 0 65px; height: 560px; position: relative; overflow: hidden; z-index: 1}
 .cards .box:nth-child(even) { text-align: right;}
 .cards .box:nth-child(odd)  { text-align: left;}
@@ -922,7 +927,7 @@ h1 span.green           { color: #A6DF3A; display: block;}
                                     bottom: 0;
                                     top: 0;
                                     right: 0;
-                                    background-color: rgba(0,0,0,0.4);
+                                    background-color: rgba(0,0,0,0.6);
                                     z-index: -1;}
 .scheme h3                        { color: #fff; 
                                     text-transform: uppercase;

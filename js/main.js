@@ -60,21 +60,34 @@ $(function(){
 #############################
 */
 
+if (params.isMobile) {
+  $('object').remove();
+}
+
 jQuery(document).ready(function($) {
     $(function() {
     $( "#tabs" ).tabs({
       activate: function( event, ui ) {
-        console.log(event);
         ui.newPanel.find('.slider').get(0).slick.setPosition();
       }
     });
   });
 
-  $('.slider').slick();
+    $('.tabs_menu a').on('click', function(event) {
+      event.preventDefault();
+      var selector = $(this).attr('data-display');
+      selector = '.' + selector;
+      console.log(selector);
+      $(selector).fadeIn('slow').siblings('p').css('display', 'none');
+    });
+
+  $('.slider').slick({
+    adaptiveHeight: true
+  });
   $('.offerSlider').slick();
 
 
-$(function() { // scroll to anchor
+/*$(function() { // scroll to anchor
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
@@ -88,7 +101,7 @@ $(function() { // scroll to anchor
         }
       }
     });
-  });
+  });*/
 
 /*-----------------------------------------------------------------*/  
   $('.magnific').magnificPopup({
@@ -277,7 +290,7 @@ $(function() { // scroll to anchor
         icon: markerImage,
         position: mapMarkerCoord, 
         map: map,
-        title:"Siberian Wild Apps"
+        title:"Ultra Fitness"
       });
       $(window).resize(function (){
         map.setCenter(mapCenterCoord);
